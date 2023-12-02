@@ -1,0 +1,41 @@
+{
+    "questionA": {
+        "context": "Which animals live in the water?",
+        "options": [
+            "Dolphin",
+            "Rabbit",
+            "Frog",
+            "Chicken"
+        ],
+        "answers": [
+            "Dolphin",
+            "Frog"
+        ]
+    },
+    "questionB": {
+        "context": "Which animals have wings?",
+        "options": {
+            "B1": "Bear",
+            "B2": "Owl",
+            "B3": "Butterfly",
+            "B4": "Horse"
+        },
+        "answers": {
+            "ANS1": "B2 - Owl",
+            "ANS2": "B3 - Butterfly"
+        }
+    },
+    "questionC": {
+        "context": "Which animals can you find in a jungle?",
+        "options": {
+            "C1": "Snake",
+            "C2": "Penguin",
+            "C3": "Tiger",
+            "C4": "Sheep"
+        },
+        "answers": {
+            "ANS1": "C1 - Snake",
+            "ANS2": "C3 - Tiger"
+        }
+    }
+}
