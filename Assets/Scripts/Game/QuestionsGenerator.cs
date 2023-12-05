@@ -28,7 +28,7 @@ public class QuestionsGenerator : MonoBehaviour
         questionC.text = Questions.questionC.context;
 
         // Load all of the generated sprites from folder
-        sprites = Resources.LoadAll<Sprite>("Sprites");
+        sprites = Resources.LoadAll<Sprite>("Generated Sprites");
         // Assign Images to the FLOOR options
         for (int i = 0; i < 12; i++)
         {
