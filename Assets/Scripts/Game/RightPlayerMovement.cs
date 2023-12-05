@@ -14,6 +14,6 @@ public class RightPlayerMovement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
-        Debug.Log("yey");
+        Debug.Log("Right Player");
     }
 }

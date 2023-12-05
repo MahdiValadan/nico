@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 197784994}
   - component: {fileID: 197784998}
   - component: {fileID: 197784999}
+  - component: {fileID: 197785000}
   m_Layer: 0
   m_Name: LeftPlayer
   m_TagString: Untagged
@@ -374,7 +375,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -451,6 +452,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+--- !u!54 &197785000
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197784992}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &208141456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8551785887674049518, guid: 53304dc23c45fd449887ef4db1aec157, type: 3}
@@ -1021,6 +1049,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577853048}
     m_Modifications:
+    - target: {fileID: 3245016437404874738, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5482011437346610896, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7477
@@ -1500,6 +1532,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4384578417289230900, guid: 0b16d135c1b90417baa3e6f09df00404, type: 3}
   m_PrefabInstance: {fileID: 685004244}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &686427442 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1416604463496967367, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+  m_PrefabInstance: {fileID: 1014777090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &773190229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1551,7 @@ GameObject:
   - component: {fileID: 773190230}
   - component: {fileID: 773190235}
   - component: {fileID: 773190236}
+  - component: {fileID: 773190237}
   m_Layer: 0
   m_Name: RightPlayer
   m_TagString: Untagged
@@ -1536,7 +1574,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1632,6 +1670,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+--- !u!54 &773190237
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773190229}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!212 &808710997 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1416604463496967367, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+  m_PrefabInstance: {fileID: 1812154850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &868445921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577853048}
     m_Modifications:
+    - target: {fileID: 3245016437404874738, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5482011437346610896, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2
@@ -2113,6 +2187,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b16d135c1b90417baa3e6f09df00404, type: 3}
+--- !u!212 &1191940208 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1416604463496967367, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+  m_PrefabInstance: {fileID: 540095973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1228168064 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6168260065188961853, guid: 0b16d135c1b90417baa3e6f09df00404, type: 3}
@@ -2267,6 +2346,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331311209}
   m_CullTransparentMesh: 1
+--- !u!212 &1341578064 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1416604463496967367, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+  m_PrefabInstance: {fileID: 1756229543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1380862707 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4384578417289230900, guid: 0b16d135c1b90417baa3e6f09df00404, type: 3}
@@ -3036,6 +3120,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577853048}
     m_Modifications:
+    - target: {fileID: 3245016437404874738, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5482011437346610896, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.42
@@ -3236,6 +3324,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577853048}
     m_Modifications:
+    - target: {fileID: 3245016437404874738, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5482011437346610896, guid: ddc78141e35774c9b953a806c914fa3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.87
@@ -3569,10 +3661,10 @@ MonoBehaviour:
   questionA: {fileID: 685004245}
   questionB: {fileID: 916368395}
   questionC: {fileID: 1228168064}
-  optionA1: {fileID: 0}
-  optionA2: {fileID: 0}
-  optionA3: {fileID: 0}
-  optionA4: {fileID: 0}
+  optionA1: {fileID: 1191940208}
+  optionA2: {fileID: 808710997}
+  optionA3: {fileID: 686427442}
+  optionA4: {fileID: 1341578064}
   spriteA1: {fileID: 21300000, guid: 9863d49d344bf4b5eb715260d5e8f234, type: 3}
   spriteA2: {fileID: 21300000, guid: 2c7cbc5ddfbce4e89bfc380e521fb9f3, type: 3}
   spriteA3: {fileID: 21300000, guid: c9246d9e60cea42f99bcdc943cc0f356, type: 3}

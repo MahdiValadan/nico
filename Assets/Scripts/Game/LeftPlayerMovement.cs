@@ -12,8 +12,8 @@ public class LeftPlayerMovement : MonoBehaviour
         // Move the object
         transform.Translate(movement);
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Cube passed through another cube!");
+        Debug.Log("Left Player");
     }
 }
