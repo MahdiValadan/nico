@@ -2,7 +2,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class LeftPlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 3f; // Adjust the speed as needed
+    public float moveSpeed = 5f; // Adjust the speed as needed
+    public string spriteName;
     void Update()
     {
         float horizontalInput = Input.GetKey(KeyCode.A) ? -1f : (Input.GetKey(KeyCode.D) ? 1f : 0f);
@@ -12,8 +13,10 @@ public class LeftPlayerMovement : MonoBehaviour
         // Move the object
         transform.Translate(movement);
     }
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Left Player");
+        SpriteRenderer spriteRenderer = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
+        spriteName = spriteRenderer.sprite.name;
+        Debug.Log("Left Player stands on: " + spriteName);
     }
 }

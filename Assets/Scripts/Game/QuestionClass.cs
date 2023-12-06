@@ -1,13 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 [System.Serializable]
-
 public class Question
 {
     public string context;
     public string[] options;
-    public string[] answers;
-    
+    public List<string> answers;
+
 }
-public class Questions {
+public class Questions
+{
     public Question questionA;
     public Question questionB;
     public Question questionC;

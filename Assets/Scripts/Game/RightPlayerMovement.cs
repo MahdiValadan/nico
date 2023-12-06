@@ -1,7 +1,8 @@
 using UnityEngine;
 public class RightPlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 3f; // Adjust the speed as needed
+    public float moveSpeed = 5f; // Adjust the speed as needed
+    public string spriteName;
     void Update()
     {
         float horizontalInput = Input.GetKey(KeyCode.LeftArrow) ? -1f : (Input.GetKey(KeyCode.RightArrow) ? 1f : 0f);
@@ -14,6 +15,8 @@ public class RightPlayerMovement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
-        Debug.Log("Right Player");
+        SpriteRenderer spriteRenderer = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
+        spriteName = spriteRenderer.sprite.name;
+        Debug.Log("Right Player stands on: " + spriteName);
     }
 }

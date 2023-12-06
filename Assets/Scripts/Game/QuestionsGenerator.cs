@@ -1,6 +1,8 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 public class QuestionsGenerator : MonoBehaviour
 {
@@ -9,7 +11,12 @@ public class QuestionsGenerator : MonoBehaviour
     public TextMeshProUGUI questionB;
     public TextMeshProUGUI questionC;
 
-    // OPTIONS
+    //Answers
+    public List<string> answersA;
+    public List<string> answersB; 
+    public List<string> answersC; 
+
+    // Options
     public SpriteRenderer[] options;
 
     //Sprites List
@@ -23,9 +30,15 @@ public class QuestionsGenerator : MonoBehaviour
 
     void Start()
     {
+        //Load generated Questions context
         questionA.text = Questions.questionA.context;
         questionB.text = Questions.questionB.context;
         questionC.text = Questions.questionC.context;
+
+        //Set answers
+        answersA = Questions.questionA.answers;
+        answersB = Questions.questionB.answers;
+        answersC = Questions.questionC.answers;
 
         // Load all of the generated sprites from folder
         sprites = Resources.LoadAll<Sprite>("Generated Sprites");
