@@ -49,7 +49,9 @@ public class CheckAnswer : MonoBehaviour
                     if (answer.Contains(leftPlayerChoice) && answer.Contains(rightPlayerChoice))
                     {
                         feedback.text = "Yey!";
-                        // MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
+                        //MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
+                        MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
+                        MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", true);
                     }
                     else
                     {
@@ -65,6 +67,8 @@ public class CheckAnswer : MonoBehaviour
         // Wait for 5 seconds
         hasChecked = true;
         yield return new WaitForSeconds(5f);
+        MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.black);
+        MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", false);
         feedback.text = "";
         NextLevel.SetActive(true);
         gameObject.SetActive(false);
