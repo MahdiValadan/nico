@@ -1289,7 +1289,7 @@ MonoBehaviour:
   log: {fileID: 146027110}
   startBtn: {fileID: 108078578}
   generateBtn: {fileID: 387646809}
-  input: {fileID: 0}
+  input: {fileID: 1424480065}
 --- !u!1 &891912563
 GameObject:
   m_ObjectHideFlags: 0
