@@ -14,24 +14,32 @@ public class GPT : MonoBehaviour
     public TextMeshProUGUI log;
     public Button startBtn;
     public Button generateBtn;
+    public TMP_InputField input;
 
     private OpenAIApi openAI = new OpenAIApi();
 
+    // STARTING GAME FUNCTION
     public void LoadNextScene()
     {
         SceneManager.LoadScene("Game Scene");
     }
-
+    // SENDING REQUEST FUNCTION
     public async void SendRequest()
     {
 
         generateBtn.gameObject.SetActive(false);
         log.gameObject.SetActive(true);
-
+        input.gameObject.SetActive(false);
         string prompt = File.ReadAllText("Assets/Prompts/Prompt.txt");
+        string topic = input.text;
+        if (string.IsNullOrEmpty(topic))
+        {
+            topic = "Animal";
+        }
+        prompt = prompt.Replace("???", topic);
         var req = new CreateChatCompletionRequest
         {
-            Model = "gpt-4",
+            Model = "gpt-4-turbo-preview",
             Messages = new List<ChatMessage>()
         {
             new ChatMessage()
@@ -88,7 +96,7 @@ public class GPT : MonoBehaviour
                 }
             );
             string url = resImage.Data[0].Url;
-            string savePath = "Assets/Resources/Generated Sprites/"+ allOptions[i] +".png";
+            string savePath = "Assets/Resources/Generated Sprites/" + allOptions[i] + ".png";
             StartCoroutine(DownloadAndSaveImageCoroutine(url, savePath));
         }
         Invoke("DelayedAction", 5.0f);

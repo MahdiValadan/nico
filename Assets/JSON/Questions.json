@@ -1,42 +1,41 @@
 {
 "questionA": {
-"context": "Which animal has a long trunk?",
+"context": "What is 5 plus 3?",
 "options": [
-"A1-Elephant",
-"A2-Lion",
-"A3-Dog",
-"A4-Cat"
+"A1-8",
+"A2-7",
+"A3-9",
+"A4-6"
 ],
 "answers": [
-"A1-Elephant"
+"A1-8"
 ]
-},
-
+}
+,
 "questionB": {
-"context": "What do rabbits like to eat?",
+"context": "Which numbers are even?",
 "options": [
-"B1-Carrots",
-"B2-Bananas",
-"B3-Meat",
-"B4-Pizza"
+"B1-2",
+"B2-5",
+"B3-8",
+"B4-7"
 ],
 "answers": [
-"B1-Carrots",
-"B2-Bananas"
+"B1-2",
+"B3-8"
 ]
-},
-
+}
+,
 "questionC": {
-"context": "Which of these animals can fly?",
+"context": "What do you get when you subtract 4 from 10?",
 "options": [
-"C1-Dolphin",
-"C2-Eagle",
-"C3-Horse",
-"C4-Butterfly"
+"C1-5",
+"C2-6",
+"C3-7",
+"C4-4"
 ],
 "answers": [
-"C2-Eagle",
-"C4-Butterfly"
+"C2-6"
 ]
 }
 }
