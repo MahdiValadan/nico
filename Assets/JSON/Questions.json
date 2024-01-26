@@ -1,41 +1,42 @@
 {
-    "questionA": {
-        "context": "Which animals live in the water?",
-        "options": [
-            "A1-Dolphin",
-            "A2-Rabbit",
-            "A3-Frog",
-            "A4-Chicken"
-        ],
-        "answers": [
-            "A1-Dolphin",
-            "A3-Frog"
-        ]
-    },
-    "questionB": {
-        "context": "Which animals have wings?",
-        "options": [
-            "B1-Bear",
-            "B2-Owl",
-            "B3-Butterfly",
-            "B4-Horse"
-        ],
-        "answers": [
-            "B2-Owl",
-            "B3-Butterfly"
-        ]
-    },
-    "questionC": {
-        "context": "Which animals can you find in a jungle?",
-        "options": [
-            "C1-Snake",
-            "C2-Penguin",
-            "C3-Tiger",
-            "C4-Sheep"
-        ],
-        "answers": [
-            "C1-Snake",
-            "C3-Tiger"
-        ]
-    }
+"questionA": {
+"context": "Which animal has a long trunk?",
+"options": [
+"A1-Elephant",
+"A2-Lion",
+"A3-Dog",
+"A4-Cat"
+],
+"answers": [
+"A1-Elephant"
+]
+},
+
+"questionB": {
+"context": "What do rabbits like to eat?",
+"options": [
+"B1-Carrots",
+"B2-Bananas",
+"B3-Meat",
+"B4-Pizza"
+],
+"answers": [
+"B1-Carrots",
+"B2-Bananas"
+]
+},
+
+"questionC": {
+"context": "Which of these animals can fly?",
+"options": [
+"C1-Dolphin",
+"C2-Eagle",
+"C3-Horse",
+"C4-Butterfly"
+],
+"answers": [
+"C2-Eagle",
+"C4-Butterfly"
+]
+}
 }

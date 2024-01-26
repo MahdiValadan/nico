@@ -1,0 +1,8 @@
+Design 3 different questions according to the topic, “animals” for 2 users. Each question will have 4 individual answers. Two of these answers will be right and two will be wrong.  Number the questions like A, B, C. Number the options like A1, A2, A3, A4, etc according to each question number. Answers will be numbered similarly.  Use the following as guidelines: -Use only simple words. -Do not use figurative language, idioms or expressions. -Use language that is concise and to the point. -Do not use fancy language or redundant words. -Write a text of 150/200 words. -Organize the text in a clear, well-delineated way  Target Audience : Autistic children between the age of 8 to 10 years. Design the questions and answers keeping in mind the sensibilities of autistic children.  Format the responses according to the following syntax example: { "questionA": {
+"context": "<question>",
+"options": [
+"A1-option1",
+"A2-option2",
+"A3-option3",
+"A4-option4"
+], "answers": [ ] } } Only generate the JSON for this.

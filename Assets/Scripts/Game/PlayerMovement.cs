@@ -32,19 +32,10 @@ public class PlayerMovement : MonoBehaviour
     {
         SpriteRenderer spriteRenderer = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
         spriteName = spriteRenderer.sprite.name;
-
-        //StartCoroutine(Wait(spriteRenderer));
     }
 
     void OnCollisionExit(Collision collision)
     {
         spriteName = null;
-    }
-
-    IEnumerator Wait(SpriteRenderer spriteRenderer)
-    {
-        // Wait for 5 seconds
-        yield return new WaitForSeconds(2f);
-        spriteName = spriteRenderer.sprite.name;
     }
 }
