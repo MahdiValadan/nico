@@ -1,41 +1,40 @@
 {
 "questionA": {
-"context": "What is 5 plus 3?",
+"context": "What colors can be a cat?",
 "options": [
-"A1-8",
-"A2-7",
-"A3-9",
-"A4-6"
+"A1-Blue",
+"A2-Green",
+"A3-Black",
+"A4-Orange"
 ],
 "answers": [
-"A1-8"
+"A3-Black",
+"A4-Orange"
 ]
-}
-,
+},
 "questionB": {
-"context": "Which numbers are even?",
+"context": "Which animals can fly?",
 "options": [
-"B1-2",
-"B2-5",
-"B3-8",
-"B4-7"
+"B1-Dog",
+"B2-Bird",
+"B3-Pig",
+"B4-Bat"
 ],
 "answers": [
-"B1-2",
-"B3-8"
+"B2-Bird",
+"B4-Bat"
 ]
-}
-,
+},
 "questionC": {
-"context": "What do you get when you subtract 4 from 10?",
+"context": "What do fish use to breathe?",
 "options": [
-"C1-5",
-"C2-6",
-"C3-7",
-"C4-4"
+"C1-Lungs",
+"C2-Gills",
+"C3-Nose",
+"C4-Fins"
 ],
 "answers": [
-"C2-6"
+"C2-Gills"
 ]
 }
 }

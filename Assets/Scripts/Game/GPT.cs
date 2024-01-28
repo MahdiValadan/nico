@@ -8,6 +8,7 @@ using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class GPT : MonoBehaviour
 {
@@ -15,28 +16,33 @@ public class GPT : MonoBehaviour
     public Button startBtn;
     public Button generateBtn;
     public TMP_InputField input;
+    public GameObject spinner;
 
     private OpenAIApi openAI = new OpenAIApi();
 
-    // STARTING GAME FUNCTION
+    // # STARTING GAME FUNCTION #
     public void LoadNextScene()
     {
         SceneManager.LoadScene("Game Scene");
     }
-    // SENDING REQUEST FUNCTION
+    // # SENDING REQUEST FUNCTION #
     public async void SendRequest()
     {
-
+        // UPDATE UI
         generateBtn.gameObject.SetActive(false);
-        log.gameObject.SetActive(true);
         input.gameObject.SetActive(false);
-        string prompt = File.ReadAllText("Assets/Prompts/Prompt.txt");
+        log.gameObject.SetActive(true);
+        log.text = "Generating Questions";
+        spinner.SetActive(true);
+        // READ THE PROMPT 
         string topic = input.text;
         if (string.IsNullOrEmpty(topic))
         {
             topic = "Animal";
         }
+        string prompt = File.ReadAllText("Assets/Prompts/Prompt.txt");
         prompt = prompt.Replace("???", topic);
+        // CREAT GPT-4 REQUEST
         var req = new CreateChatCompletionRequest
         {
             Model = "gpt-4-turbo-preview",
@@ -49,43 +55,44 @@ public class GPT : MonoBehaviour
             }
         }
         };
-
-        log.text = "Generating Questions...";
+        // SEND REQUEST TO GPT
         var res = await openAI.CreateChatCompletion(req);
         var json = res.Choices[0].Message.Content;
-        log.text = "Questiones Generated";
-
+        // WRITE JSON FILE
         using (StreamWriter writer = new StreamWriter("Assets/JSON/Questions.json"))
         {
             writer.Write(json);
         }
+        // REFRESH ASSETS
+        AssetDatabase.Refresh();
+        // UPDATE UI
+        log.text = "Questiones Generated";
         Debug.Log("GPT JSON Response written to file");
-
-        // Reading JSON
+        //READ OPTIONS FROM JSON
         string jsonRead = System.IO.File.ReadAllText("Assets/JSON/Questions.json");
         Questions questions = JsonUtility.FromJson<Questions>(jsonRead);
-
-        //Answers
         string[] optionsA = questions.questionA.options;
         string[] optionsB = questions.questionB.options;
         string[] optionsC = questions.questionC.options;
-
+        // LIST OF ALL OPTIONS
         string[] allOptions = optionsA.Concat(optionsB).Concat(optionsC).ToArray();
         string[] allOptionsTrimed = optionsA.Concat(optionsB).Concat(optionsC).ToArray();
-
         for (int i = 0; i < allOptionsTrimed.Length; i++)
         {
             allOptionsTrimed[i] = allOptionsTrimed[i].Substring(3);
         }
-
+        // UPDATE UI
         log.text = "Generating Images...";
-
+        // CLEARE IMAGE DIRECTORY
         ClearGeneratedImageDirectory();
-
+        AssetDatabase.Refresh();
         // Generate Images
         string imagePrompt = File.ReadAllText("Assets/Prompts/ImagePrompt.txt");
         for (int i = 0; i < allOptions.Length; i++)
         {
+            // UPDATE UI
+            log.text = "Generating Image " + i;
+            // SEND DALL-E-3 REQUEST
             string concatedImagePrompt = allOptionsTrimed[i] + " " + imagePrompt;
             var resImage = await openAI.CreateImage(
                 new CreateImageRequest
@@ -95,11 +102,13 @@ public class GPT : MonoBehaviour
                     Size = ImageSize.Size1024
                 }
             );
+            // DOWNLOAD GENERETED IMAGE
             string url = resImage.Data[0].Url;
             string savePath = "Assets/Resources/Generated Sprites/" + allOptions[i] + ".png";
             StartCoroutine(DownloadAndSaveImageCoroutine(url, savePath));
         }
-        Invoke("DelayedAction", 5.0f);
+        //FINAL SETUPS
+        StartCoroutine(FinalSetup());
     }
 
     // IMAGE DOWNLOAD FUNCTION
@@ -140,10 +149,15 @@ public class GPT : MonoBehaviour
         }
         Debug.Log("Generated Sprites Directory has been cleared");
     }
-    void DelayedAction()
+    private IEnumerator FinalSetup()
     {
-        Debug.Log("Wait 5 seconds");
-        log.text = "";
+        Debug.Log("Coroutine started");
+        // Wait for 10 seconds
+        yield return new WaitForSeconds(10.0f);
+        Debug.Log("Coroutine resumed after 10 seconds");
+        // UPDATE UI
+        AssetDatabase.Refresh();
+        spinner.SetActive(false);
         log.gameObject.SetActive(false);
         startBtn.gameObject.SetActive(true);
     }
