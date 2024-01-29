@@ -1,40 +1,41 @@
 {
 "questionA": {
-"context": "What colors can be a cat?",
+"context": "What do fish use to breathe under water?",
 "options": [
-"A1-Blue",
-"A2-Green",
-"A3-Black",
-"A4-Orange"
+"A1-Gills",
+"A2-Lungs",
+"A3-Nose",
+"A4-Fins"
 ],
 "answers": [
-"A3-Black",
-"A4-Orange"
+"A1-Gills"
 ]
-},
+}
+,
 "questionB": {
-"context": "Which animals can fly?",
+"context": "Which animals are known for being able to fly?",
 "options": [
-"B1-Dog",
-"B2-Bird",
-"B3-Pig",
-"B4-Bat"
+"B1-Dogs",
+"B2-Birds",
+"B3-Cats",
+"B4-Bats"
 ],
 "answers": [
-"B2-Bird",
-"B4-Bat"
+"B2-Birds",
+"B4-Bats"
 ]
-},
+}
+,
 "questionC": {
-"context": "What do fish use to breathe?",
+"context": "What do turtles use for protection?",
 "options": [
-"C1-Lungs",
-"C2-Gills",
-"C3-Nose",
-"C4-Fins"
+"C1-Claws",
+"C2-Shell",
+"C3-Teeth",
+"C4-Fur"
 ],
 "answers": [
-"C2-Gills"
+"C2-Shell"
 ]
 }
 }
