@@ -50,15 +50,15 @@ public class CheckAnswer : MonoBehaviour
                     {
                         feedback.text = "Yey!";
                         // MAGIC ROOM OBJECTS
-                        //MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
-                        MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
+                        MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
+                        //MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
                         MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", true);
                     }
                     else
                     {
                         feedback.text = "Nope!";
                         // MAGIC ROOM OBJECTS
-                        MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
+                        MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 50);
                     }
                     StartCoroutine(ActivateNextLevel(feedback));
                 }
