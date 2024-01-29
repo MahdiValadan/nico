@@ -45,22 +45,29 @@ public class CheckAnswer : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer >= interval)
                 {
-                    
+
                     if (answer.Contains(leftPlayerChoice) && answer.Contains(rightPlayerChoice))
                     {
                         feedback.text = "Yey!";
+                        StartCoroutine(ActivateNextLevel(feedback));
                         // MAGIC ROOM OBJECTS
-                        MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
-                        //MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
-                        MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", true);
+                        try
+                        {
+                            MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.green);
+                            //MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
+                            MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", true);
+                        }
+                        catch
+                        {
+                            Debug.LogError("Magic Room Instance Not Found!");
+                        }
                     }
                     else
                     {
-                        feedback.text = "Nope!";
+                        feedback.text = "Nope! Try Again";
                         // MAGIC ROOM OBJECTS
-                        MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 50);
+                        //MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 50);
                     }
-                    StartCoroutine(ActivateNextLevel(feedback));
                 }
             }
         }
@@ -74,8 +81,15 @@ public class CheckAnswer : MonoBehaviour
         NextLevel.SetActive(true);
         gameObject.SetActive(false);
         // MAGIC ROOM OBJECTS
-        MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.black);
-        MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", false);
+        try
+        {
+            MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.black);
+            MagicRoomManager.instance.MagicRoomAppliancesManager.SendChangeCommand("Macchina delle Bolle", false);
+        }
+        catch
+        {
+            Debug.LogError("Magic Room Instance Not Found!");
+        }
     }
 }
 

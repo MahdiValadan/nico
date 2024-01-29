@@ -1,41 +1,41 @@
 {
-"questionA": {
-"context": "What do fish use to breathe under water?",
-"options": [
-"A1-Gills",
-"A2-Lungs",
-"A3-Nose",
-"A4-Fins"
-],
-"answers": [
-"A1-Gills"
-]
-}
-,
-"questionB": {
-"context": "Which animals are known for being able to fly?",
-"options": [
-"B1-Dogs",
-"B2-Birds",
-"B3-Cats",
-"B4-Bats"
-],
-"answers": [
-"B2-Birds",
-"B4-Bats"
-]
-}
-,
-"questionC": {
-"context": "What do turtles use for protection?",
-"options": [
-"C1-Claws",
-"C2-Shell",
-"C3-Teeth",
-"C4-Fur"
-],
-"answers": [
-"C2-Shell"
-]
-}
+    "questionA": {
+        "context": "Which animals live in the water?",
+        "options": [
+            "A1-Dolphin",
+            "A2-Rabbit",
+            "A3-Frog",
+            "A4-Chicken"
+        ],
+        "answers": [
+            "A1-Dolphin",
+            "A3-Frog"
+        ]
+    },
+    "questionB": {
+        "context": "Which animals have wings?",
+        "options": [
+            "B1-Bear",
+            "B2-Owl",
+            "B3-Butterfly",
+            "B4-Horse"
+        ],
+        "answers": [
+            "B2-Owl",
+            "B3-Butterfly"
+        ]
+    },
+    "questionC": {
+        "context": "Which animals can you find in a jungle?",
+        "options": [
+            "C1-Snake",
+            "C2-Penguin",
+            "C3-Tiger",
+            "C4-Sheep"
+        ],
+        "answers": [
+            "C1-Snake",
+            "C3-Tiger"
+        ]
+    }
 }

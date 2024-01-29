@@ -2070,7 +2070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.819e-12, y: 346}
+  m_AnchoredPosition: {x: 0, y: 435.79}
   m_SizeDelta: {x: 1195.7256, y: 208.4109}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868445923
@@ -2093,10 +2093,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yey! You reach Candy Mountain
+  m_text: Yey! You Reach The Candy Mountain
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f2dcf029949142e28b974630369c8b4e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1dd0d5e658771403ebc3eaa1ade1b0fb, type: 2}
+  m_sharedMaterial: {fileID: 5543274604075028617, guid: 1dd0d5e658771403ebc3eaa1ade1b0fb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2120,8 +2120,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2752,7 +2752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 290
+      value: 389.47
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4488,8 +4488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -195.25, y: -57.39}
-  m_SizeDelta: {x: 390.5, y: 114.78}
+  m_AnchoredPosition: {x: 0, y: 0.000031471}
+  m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832058378
 MonoBehaviour:
@@ -4538,8 +4538,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4746,7 +4746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 290
+      value: 389.47
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4891,7 +4891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 290
+      value: 389.47
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5502,7 +5502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 290
+      value: 360.98
       objectReference: {fileID: 0}
     - target: {fileID: 3474879335308107686, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5518,10 +5518,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3952004692918231430, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_text
-      value: 'Hey there!
-
-        I am Bob, your new friend. I will help you to reach
-        CANDY Mountain '
+      value: "Hey there!\nI am Bob, your new friend. \nI will help you to reach the
+        Candy Mountain"
       objectReference: {fileID: 0}
     - target: {fileID: 3952004692918231430, guid: cb3bd3b979d34427f922ff9b1e8c5d60, type: 3}
       propertyPath: m_fontSize
