@@ -58,7 +58,7 @@ public class CheckAnswer : MonoBehaviour
                     {
                         feedback.text = "Nope!";
                         // MAGIC ROOM OBJECTS
-                        MagicRoomManager.instance.MagicRoomLightManager.SendColor(Color.magenta);
+                        MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 255);
                     }
                     StartCoroutine(ActivateNextLevel(feedback));
                 }
