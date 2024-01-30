@@ -69,6 +69,9 @@ public class CheckAnswer : MonoBehaviour
                         //MagicRoomManager.instance.MagicRoomLightManager.SendColor("#00FFFF", 50);
                     }
                 }
+            } else
+            {
+                timer = 0f;
             }
         }
     }
@@ -76,7 +79,7 @@ public class CheckAnswer : MonoBehaviour
     {
         // Wait for 5 seconds
         hasChecked = true;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         feedback.text = "";
         NextLevel.SetActive(true);
         gameObject.SetActive(false);

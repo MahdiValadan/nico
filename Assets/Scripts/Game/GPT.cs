@@ -64,7 +64,9 @@ public class GPT : MonoBehaviour
             writer.Write(json);
         }
         // REFRESH ASSETS
+#if UNITY_EDITOR
         AssetDatabase.Refresh();
+#endif
         // UPDATE UI
         log.text = "Questiones Generated";
         Debug.Log("GPT JSON Response written to file");
@@ -85,7 +87,10 @@ public class GPT : MonoBehaviour
         log.text = "Generating Images...";
         // CLEARE IMAGE DIRECTORY
         ClearGeneratedImageDirectory();
+        // REFRESH ASSETS
+#if UNITY_EDITOR
         AssetDatabase.Refresh();
+#endif
         // Generate Images
         string imagePrompt = File.ReadAllText("Assets/Prompts/ImagePrompt.txt");
         for (int i = 0; i < allOptions.Length; i++)
@@ -118,18 +123,14 @@ public class GPT : MonoBehaviour
         {
             // Send the request and wait for a response
             yield return webRequest.SendWebRequest();
-
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
                 // Get the downloaded texture
                 Texture2D downloadedTexture = DownloadHandlerTexture.GetContent(webRequest);
-
                 // Convert the texture to a byte array
                 byte[] bytes = downloadedTexture.EncodeToPNG(); // You can also use EncodeToPNG()
-
                 // Save the byte array to a file
                 File.WriteAllBytes(savePath, bytes);
-
                 Debug.Log("Image downloaded and saved at: " + savePath);
             }
             else
@@ -155,8 +156,11 @@ public class GPT : MonoBehaviour
         // Wait for 10 seconds
         yield return new WaitForSeconds(10.0f);
         Debug.Log("Coroutine resumed after 10 seconds");
-        // UPDATE UI
+        // REFRESH ASSETS
+#if UNITY_EDITOR
         AssetDatabase.Refresh();
+#endif
+        // UPDATE UI
         spinner.SetActive(false);
         log.gameObject.SetActive(false);
         startBtn.gameObject.SetActive(true);
