@@ -1,81 +1,23 @@
-# AUI
+# Nico
 
-AUI is a lightweight UI component library/template intended to help you build consistent, reusable interfaces faster. This repository provides a starting point you can extend for your own apps.
+Interactive Social Learning Game for Children with social disorder and autism.
 
-## Features
+## Overview
+Nico is an interactive social learning game designed to support children with social disorders and autism by providing engaging, guided social scenarios.
 
-- Reusable UI components
-- Consistent styling primitives
-- Easy to extend and customize
-- Clean, minimal structure
+## Project details
+- Institution: Politecnico di Milano
+- Period: 10/2023 – 02/2024
+- Technology: Unity Game Engine, OpenAI GPT
 
-## Getting Started
+## Demo
+- YouTube: https://youtu.be/QvWR9_speOI
 
-### Prerequisites
-
-- Git
-- A modern Node.js runtime (if this project uses Node)
-
-### Installation
-
-```bash
-git clone https://github.com/MahdiValadan/AUI.git
-cd AUI
-```
-
-If the project has a package manager config (package.json), install dependencies:
-
-```bash
-npm install
-# or
-yarn
-# or
-pnpm install
-```
-
-### Run
-
-If this is a Node-based project, start the dev server:
-
-```bash
-npm run dev
-```
-
-## Usage
-
-Describe how to import and use components here. Example:
-
-```ts
-// Example (update to match your codebase)
-import { Button } from './src/components/Button'
-```
-
-## Project Structure
-
-```text
-AUI/
-  README.md
-  src/
-    components/
-    styles/
-```
-
-## Contributing
-
-Contributions are welcome!
-
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feature/my-change`
-3. Commit your changes: `git commit -m "Add my change"`
-4. Push to the branch: `git push origin feature/my-change`
-5. Open a Pull Request
+## Repository
+This repository contains the source code and assets related to the Nico project.
 
 ## License
+MIT License
 
-Add your license here (e.g., MIT).
-
----
-
-### Maintainer
-
+## Maintainer
 - MahdiValadan
