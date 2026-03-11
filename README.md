@@ -8,7 +8,7 @@ Nico is an interactive social learning game designed to support children with so
 ## Project details
 - Institution: Politecnico di Milano
 - Period: 10/2023 – 02/2024
-- Technology: Unity Game Engine, OpenAI GPT
+- Technology: Unity Game Engine, Microsoft Xbox Kinect,OpenAI GPT
 
 ## Demo
 - YouTube: https://youtu.be/QvWR9_speOI
